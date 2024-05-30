@@ -19,12 +19,23 @@
   <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
 
   <style>
+     ::-webkit-scrollbar {
+    width: 0px; /* 스크롤 바의 너비 */
+    }
     body{
       margin: 0;
       padding: 0;
       height: 600vh;
       width: 100vw;
       overflow-x: hidden;
+    }
+    a{
+      text-decoration: none;
+      color:#000;
+    }
+    p{
+      margin:0;
+      padding:0;
     }
     /**** header ****/
     header{
@@ -75,6 +86,7 @@
       top:38px;
       right:90px;
       font-family: var(--font-en);
+      cursor: pointer;
     }
     header .menu-wrapper .button span{
       display: block;
@@ -126,7 +138,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	max-width: 600px;
+	max-width: 500px;
 	aspect-ratio: 1 / 1;
 	cursor: pointer;
    }
@@ -136,11 +148,11 @@
 	will-change: transform;
   }
   .container .wheel .wheel-wrapper img:hover{
-    transition: 1s;
+    transition: 1.5s;
     border-radius: 500px 500px 0 500px;
   }
   .container .wheel .wheel-wrapper .number{
-    margin-top:680px;
+    margin-top:70vh;
     text-align: center;
     font-family: var(--font-en);
     color:#FF3D00;
@@ -150,16 +162,16 @@
     text-align: center;
     font-weight: 700;
     font-family: var(--font-en);
+    color:#000;
     margin: 0;
   }
   .container .wheel .wheel-wrapper .project{
     text-align: center;
     font-family: var(--font-ko);
+    color:#000;
     margin: 0;
   }
-  ::-webkit-scrollbar {
-    width: 0px; /* 스크롤 바의 너비 */
-}
+ 
 /**** menu *****/
   .menu{
     background-color: #99A795;
@@ -173,31 +185,112 @@
   }
   .menu .skills{
     font-family: var(--font-en);
-    font-size: 50px;
+    font-size: 40px;
     position:absolute;
-    bottom:200px;
-    left:20%;
     transform: rotate(-50deg);
     background-color: #F7F6F2;
-    width: 300px;
-    height: 300px;
-    line-height: 300px;
+    width: 15vw;
+    height: 15vw;
+    line-height: 15vw;
     text-align: center;
-    border-radius: 150px 150px 0 150px;
+    bottom:19vh; left:23%;
+    border-radius: 50% 50% 0 50%;
+    animation-name: skill-moving;
+    animation-duration: 1s;
+  }
+  @keyframes skill-moving{
+    0%{bottom:0; left:0}
+    50%{bottom:14vh; left:25%}
+    100%{bottom:19vh; left:23%;}
+  }
+  .menu .skills:hover{
+    background-color: #000;
+    color:#F7F6F2;
+    transform: rotate(-45deg);
+    transition: 0.8s;
   }
   .menu .projects{
     font-family: var(--font-en);
-    font-size: 50px;
+    font-size: 40px;
     position:absolute;
-    bottom:200px;
+    bottom:15vh;
     left:40%;
-    width:300px;
-    height: 300px;
-    line-height: 300px;
+    transform: rotate(45deg);
+    width:15vw;
+    height: 15vw;
+    line-height: 15vw;
+    text-align: center;
     background-color: #F7F6F2;
-    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-}
+    clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+    animation-name: projects-moving;
+    animation-duration: 2s;
+  }
+  @keyframes projects-moving{
+    0%{bottom:80vh; left:40%; transform: rotate(0deg);}
+    30%{ bottom:10vh; left:40%;}
+    100%{bottom:15vh; left:40%;}
+    }
+  .menu .projects:hover{
+    background-color: #E17A58;
+    color:#F7F6F2;
+    transform: rotate(40deg);
+    transition: 0.8s;
+  }
+  .menu .about{
+    font-family: var(--font-en);
+    font-size: 40px;
+    position:absolute;
+    bottom:25vh;
+    left:57%;
+    transform: rotate(50deg);
+    background-color: #F7F6F2;
+    width: 15vw;
+    height: 15vw;
+    line-height: 15vw;
+    text-align: center;
+    border-radius: 50% 50% 0 50%;
+    animation-name: about-moving;
+    animation-duration: 1.5s;
+  }
+  @keyframes about-moving{
+    0%{opcity:1; bottom:60vh; left:100%; transform: rotate(90deg);}
+    50%{bottom:20vh; left:50%}
+    100%{bottom:25vh; left:57%;}
+  }
+  .menu .about:hover{
+    background-color: #e6e6e6;
+    transform: rotate(55deg);
+    transition: 0.8s;
+  }
+  .menu .about p{
+    margin: 0;
+    transform: rotate(-30deg);
+  }
+  .menu .contents{
+    font-family: var(--font-en);
+    font-size: 50px;
+    color:#F7F6F2;
+    display: inline-block;
+  }
+  .menu .res{
+    transform: rotate(15deg) translate(45vw,13vh);
+    animation-name: res-moving;
+    animation-duration: 1.5s;
+  }
+  @keyframes res-moving{
+    0%{transform:translate(45vw,10vh);}
+    50%{transform: translate(45vw,15vh);}
+    100%{transform: translate(45vw,14vh);}
+  }
+  .menu .contents:hover{
+    color: #000;
+    cursor:context-menu;
+  }
+  .menu .action{
+    transform: rotate(-5deg) translate(60%,42vh);
+  }
+  .menu .active{
+    transform: rotate(1deg) translate(10%,47vh);
   }
   </style>
 </head>
@@ -219,11 +312,13 @@
   <!---- container ---->
   <section class="container">
     <div class="wheel">
+      <a href="#">
       <div class="wheel-wrapper">
       <img src="./assets/images/sejin.png" alt="sejinbronzevill">
       <p class="number">[01]</p>
       <p class="name">SEJIN BRONZE VILL</p>
       <p class="project">앱 디자인 프로젝트</p>
+    </a>
     </div>
     <div class="wheel-wrapper first">
       <img src="./assets/images/sejin.png" alt="sejinbronzevill">
@@ -269,12 +364,12 @@
       </div>
       </nav>
       </header>
-     <div class="skills">Skills</div>
-     <div class="projects">Projects</div>
-     <div class="about">About</div>
-     <p>Responsible</p>
-     <p>Actionable</p>
-     <p>Active</p>
+     <a href="#"><div class="skills">Skills</div></a>
+     <a href="#"><div class="projects">Projects</div></a>
+     <a href="#"><div class="about"><p>About</p></div></a>
+     <p class="res contents">Responsible</p>
+     <p class="action contents">Actionable</p>
+     <p class="active contents">Active</p>
   </section>
   <script>
 gsap.registerPlugin(ScrollTrigger, Flip);
@@ -309,7 +404,7 @@ gsap.to(wheel, {
 	scrollTrigger: {
 		start: 0,
 		end: "max",
-		scrub: 3,
+		scrub: 5,
 	}
 });
 $('.menu-wrapper').on('click', (e) => {
