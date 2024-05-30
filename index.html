@@ -4,16 +4,325 @@
   <meta charset="utf-8">
   <title>JY HOUSE</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <!-- fonts -->
+  <link rel="stylesheet" href="./assets/style/Karla.css">
+  <link rel="stylesheet" href="./assets/style/pretendard.css">
+
+  <!-- style -->
+  <link defer rel="stylesheet" href="./assets/style/global.css">
+
+  <!-- jQuery -->
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
+  <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
+
   <style>
-    h1{
-      background: url(./assets/images/logo.png) no-repeat 50%/200px;
-      text-indent: -9999px;
+    body{
+      margin: 0;
+      padding: 0;
+      height: 600vh;
+      width: 100vw;
+      overflow-x: hidden;
     }
+    /**** header ****/
+    header{
+      width: 100%;
+      position: fixed;
+      top:0;
+    }
+    header .logo{
+      margin: 0;
+      padding: 0;
+    }
+    header .logo a{
+      font-family: var(--font-en);
+      text-decoration: none;
+      color:#000;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 28px;
+      position: absolute;
+      top:38px;
+      left:90px;
+    }
+    header .text{
+      text-align: center;
+      font-family: var(--font-ko);
+      font-weight: 400;
+      font-size: 14px;
+      margin: 0;
+      position:absolute;
+      top:40px;
+      left:50%;
+      transform: translateX(-50%);
+    }
+    header span{
+      display: block;
+    }
+    header .menu-wrapper{
+      display: flex;
+    }
+    header .menu-wrapper p{
+      font-weight: 800;
+      font-style: italic;
+      font-size: 28px;
+      margin:0;
+    }
+    header .menu-wrapper{
+      position: absolute;
+      top:38px;
+      right:90px;
+      font-family: var(--font-en);
+    }
+    header .menu-wrapper .button span{
+      display: block;
+      width:32px;
+      background-color: #000;
+      margin-top: 8px;
+      margin-left: 25px;
+      transition: 0.5s;
+    }
+    header .menu-wrapper .button .bar1{
+      height: 5px;
+    }
+    header .menu-wrapper .button .bar2{
+      height: 2px;
+      margin-top: 8px;
+    }
+    header .menu-wrapper .button.toggle-btn .bar1{
+      transform: translateY(8px) rotate(45deg);
+      height: 2px;
+    }
+    header .menu-wrapper .button.toggle-btn .bar2{
+      transform: translateY(5px) rotate(-45deg);
+      margin-top: 0;
+    }
+
+    /**** container ****/
+   .container{
+    height: 50vh;
+    bottom:0;
+    position: fixed;
+    width: 100%;
+   }
+  .container .wheel{
+  position: absolute;
+  top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 600vw;
+	height: 600vw;
+	max-width: 2000px;
+	max-height: 2000px;
+	left: 50%;
+	transform: translateX(-50%);
+   }
+  .container .wheel .wheel-wrapper{
+  position: absolute;
+  padding-top:120px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 600px;
+	aspect-ratio: 1 / 1;
+	cursor: pointer;
+   }
+   .container .wheel .wheel-wrapper img {
+	width:100%;
+	position: absolute;
+	will-change: transform;
+  }
+  .container .wheel .wheel-wrapper img:hover{
+    transition: 1s;
+    border-radius: 500px 500px 0 500px;
+  }
+  .container .wheel .wheel-wrapper .number{
+    margin-top:680px;
+    text-align: center;
+    font-family: var(--font-en);
+    color:#FF3D00;
+    font-size: 14px;
+  }
+  .container .wheel .wheel-wrapper .name{
+    text-align: center;
+    font-weight: 700;
+    font-family: var(--font-en);
+    margin: 0;
+  }
+  .container .wheel .wheel-wrapper .project{
+    text-align: center;
+    font-family: var(--font-ko);
+    margin: 0;
+  }
+  ::-webkit-scrollbar {
+    width: 0px; /* 스크롤 바의 너비 */
+}
+/**** menu *****/
+  .menu{
+    background-color: #99A795;
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+  }
+  .menu.toggle-menu{
+    display: block;
+  }
+  .menu .skills{
+    font-family: var(--font-en);
+    font-size: 50px;
+    position:absolute;
+    bottom:200px;
+    left:20%;
+    transform: rotate(-50deg);
+    background-color: #F7F6F2;
+    width: 300px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    border-radius: 150px 150px 0 150px;
+  }
+  .menu .projects{
+    font-family: var(--font-en);
+    font-size: 50px;
+    position:absolute;
+    bottom:200px;
+    left:40%;
+    width:300px;
+    height: 300px;
+    line-height: 300px;
+    background-color: #F7F6F2;
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+  }
   </style>
 </head>
 
 <body>
-  <h1>logo</h1>
+  <!---- header ---->
+  <header>
+  <h1 class="logo"><a href="./index.html">JY:HOME</a></h1>
+  <p class="text">섬유유연제같이 좋은 향기를 좋은 에너지를 나누는<span>직원이 되도록 하겠습니다</span></p>
+  <nav class="menu-wrapper">
+  <p>MENU</p>
+  <div class="button transit">
+    <span class="bar1 transit"></span>
+    <span class="bar2 transit"></span>
+  </div>
+  </nav>
+  </header>
+
+  <!---- container ---->
+  <section class="container">
+    <div class="wheel">
+      <div class="wheel-wrapper">
+      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
+      <p class="number">[01]</p>
+      <p class="name">SEJIN BRONZE VILL</p>
+      <p class="project">앱 디자인 프로젝트</p>
+    </div>
+    <div class="wheel-wrapper first">
+      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
+      <p class="number">[02]</p>
+      <p class="name">SEJIN BRONZE VILL</p>
+      <p class="project">앱 디자인 프로젝트</p>
+    </div>
+    <div class="wheel-wrapper">
+      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
+      <p class="number">[03]</p>
+      <p class="name">SEJIN BRONZE VILL</p>
+      <p class="project">앱 디자인 프로젝트</p>
+    </div>
+    <div class="wheel-wrapper">
+      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
+      <p class="number">[04]</p>
+      <p class="name">SEJIN BRONZE VILL</p>
+      <p class="project">앱 디자인 프로젝트</p>
+    </div>
+    <div class="wheel-wrapper">
+      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
+      <p class="number">[05]</p>
+      <p class="name">SEJIN BRONZE VILL</p>
+      <p class="project">앱 디자인 프로젝트</p>
+    </div>
+    <div class="wheel-wrapper last">
+      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
+      <p class="number">[06]</p>
+      <p class="name">SEJIN BRONZE VILL</p>
+      <p class="project">앱 디자인 프로젝트</p>
+    </div>
+  </div>
+  </section>
+  <section class="menu">
+    <header>
+      <h1 class="logo"><a href="./index.html">JY:HOME</a></h1>
+      <p class="text">섬유유연제같이 좋은 향기를 좋은 에너지를 나누는<span>직원이 되도록 하겠습니다</span></p>
+      <nav class="menu-wrapper">
+      <p>MENU</p>
+      <div class="button transit">
+        <span class="bar1 transit"></span>
+        <span class="bar2 transit"></span>
+      </div>
+      </nav>
+      </header>
+     <div class="skills">Skills</div>
+     <div class="projects">Projects</div>
+     <div class="about">About</div>
+     <p>Responsible</p>
+     <p>Actionable</p>
+     <p>Active</p>
+  </section>
+  <script>
+gsap.registerPlugin(ScrollTrigger, Flip);
+var baseTl = gsap.timeline({ paused: true });
+let wheel = document.querySelector(".wheel"),
+	images = gsap.utils.toArray(".wheel-wrapper"),
+	cards = gsap.utils.toArray(".wheel-wrapper"),
+	currentCard; // keep track of last clicked card so we can put it back
+
+function setup() {
+	let radius = wheel.offsetWidth / 2,
+		center = radius,
+		slice = 360 / images.length,
+		DEG2RAD = Math.PI / 180;
+	gsap.set(images, {
+		x: i => center + radius * Math.sin(i * slice * DEG2RAD),
+		y: i => center - radius * Math.cos(i * slice * DEG2RAD),
+		rotation: i => i * slice,
+		xPercent: -50,
+		yPercent: -50
+	});
+}
+
+setup();
+
+window.addEventListener("resize", setup);
+
+gsap.to(wheel, {
+	rotation: -360,
+	ease: "none",
+	duration: images.length,
+	scrollTrigger: {
+		start: 0,
+		end: "max",
+		scrub: 3,
+	}
+});
+$('.menu-wrapper').on('click', (e) => {
+  $('.transit').toggleClass('toggle-btn');
+  $('.menu').toggleClass('toggle-menu');
+
+  $('.global-menu li').each( (index, li) => {
+    $(li).on('click', () => {
+      $('.menu-wrapper').removeClass('toggle-btn')
+      $('.menu').removeClass('toggle-menu');
+    })
+  })
+});
+  </script>
 </body>
 </html>
