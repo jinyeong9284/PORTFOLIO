@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="./assets/style/pretendard.css">
 
   <!-- style -->
-  <link defer rel="stylesheet" href="./assets/style/global.css">
+  <link defer rel="stylesheet" href="./assets/style/reset.css">
+  <link defer rel="stylesheet" href="./index.css">
 
   <!-- jQuery -->
   <script src="./assets/js/jquery-3.7.1.min.js"></script>
@@ -17,282 +18,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
   <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
+  <script defer src="./index.js"></script>
+  <script defer src="./assets/js/header.js"></script>
 
-  <style>
-     ::-webkit-scrollbar {
-    width: 0px; /* 스크롤 바의 너비 */
-    }
-    body{
-      margin: 0;
-      padding: 0;
-      height: 600vh;
-      width: 100vw;
-      overflow-x: hidden;
-    }
-    a{
-      text-decoration: none;
-      color:#000;
-    }
-    p{
-      margin:0;
-      padding:0;
-    }
-    /**** header ****/
-    header{
-      width: 100%;
-      position: fixed;
-      top:0;
-    }
-    header .logo{
-      margin: 0;
-      padding: 0;
-    }
-    header .logo a{
-      font-family: var(--font-en);
-      text-decoration: none;
-      color:#000;
-      font-weight: 800;
-      font-style: italic;
-      font-size: 28px;
-      position: absolute;
-      top:38px;
-      left:90px;
-    }
-    header .text{
-      text-align: center;
-      font-family: var(--font-ko);
-      font-weight: 400;
-      font-size: 14px;
-      margin: 0;
-      position:absolute;
-      top:40px;
-      left:50%;
-      transform: translateX(-50%);
-    }
-    header span{
-      display: block;
-    }
-    header .menu-wrapper{
-      display: flex;
-    }
-    header .menu-wrapper p{
-      font-weight: 800;
-      font-style: italic;
-      font-size: 28px;
-      margin:0;
-    }
-    header .menu-wrapper{
-      position: absolute;
-      top:38px;
-      right:90px;
-      font-family: var(--font-en);
-      cursor: pointer;
-    }
-    header .menu-wrapper .button span{
-      display: block;
-      width:32px;
-      background-color: #000;
-      margin-top: 8px;
-      margin-left: 25px;
-      transition: 0.5s;
-    }
-    header .menu-wrapper .button .bar1{
-      height: 5px;
-    }
-    header .menu-wrapper .button .bar2{
-      height: 2px;
-      margin-top: 8px;
-    }
-    header .menu-wrapper .button.toggle-btn .bar1{
-      transform: translateY(8px) rotate(45deg);
-      height: 2px;
-    }
-    header .menu-wrapper .button.toggle-btn .bar2{
-      transform: translateY(5px) rotate(-45deg);
-      margin-top: 0;
-    }
-
-    /**** container ****/
-   .container{
-    height: 50vh;
-    bottom:0;
-    position: fixed;
-    width: 100%;
-   }
-  .container .wheel{
-  position: absolute;
-  top: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 600vw;
-	height: 600vw;
-	max-width: 2000px;
-	max-height: 2000px;
-	left: 50%;
-	transform: translateX(-50%);
-   }
-  .container .wheel .wheel-wrapper{
-  position: absolute;
-  padding-top:120px;
-	top: 0;
-	left: 0;
-	width: 100%;
-	max-width: 500px;
-	aspect-ratio: 1 / 1;
-	cursor: pointer;
-   }
-   .container .wheel .wheel-wrapper img {
-	width:100%;
-	position: absolute;
-	will-change: transform;
-  }
-  .container .wheel .wheel-wrapper img:hover{
-    transition: 1.5s;
-    border-radius: 500px 500px 0 500px;
-  }
-  .container .wheel .wheel-wrapper .number{
-    margin-top:70vh;
-    text-align: center;
-    font-family: var(--font-en);
-    color:#FF3D00;
-    font-size: 14px;
-  }
-  .container .wheel .wheel-wrapper .name{
-    text-align: center;
-    font-weight: 700;
-    font-family: var(--font-en);
-    color:#000;
-    margin: 0;
-  }
-  .container .wheel .wheel-wrapper .project{
-    text-align: center;
-    font-family: var(--font-ko);
-    color:#000;
-    margin: 0;
-  }
- 
-/**** menu *****/
-  .menu{
-    background-color: #99A795;
-    position: fixed;
-    display: none;
-    width: 100vw;
-    height: 100vh;
-  }
-  .menu.toggle-menu{
-    display: block;
-  }
-  .menu .skills{
-    font-family: var(--font-en);
-    font-size: 40px;
-    position:absolute;
-    transform: rotate(-50deg);
-    background-color: #F7F6F2;
-    width: 15vw;
-    height: 15vw;
-    line-height: 15vw;
-    text-align: center;
-    bottom:19vh; left:23%;
-    border-radius: 50% 50% 0 50%;
-    animation-name: skill-moving;
-    animation-duration: 1s;
-  }
-  @keyframes skill-moving{
-    0%{bottom:0; left:0}
-    50%{bottom:14vh; left:25%}
-    100%{bottom:19vh; left:23%;}
-  }
-  .menu .skills:hover{
-    background-color: #000;
-    color:#F7F6F2;
-    transform: rotate(-45deg);
-    transition: 0.8s;
-  }
-  .menu .projects{
-    font-family: var(--font-en);
-    font-size: 40px;
-    position:absolute;
-    bottom:15vh;
-    left:40%;
-    transform: rotate(45deg);
-    width:15vw;
-    height: 15vw;
-    line-height: 15vw;
-    text-align: center;
-    background-color: #F7F6F2;
-    clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
-    animation-name: projects-moving;
-    animation-duration: 2s;
-  }
-  @keyframes projects-moving{
-    0%{bottom:80vh; left:40%; transform: rotate(0deg);}
-    30%{ bottom:10vh; left:40%;}
-    100%{bottom:15vh; left:40%;}
-    }
-  .menu .projects:hover{
-    background-color: #E17A58;
-    color:#F7F6F2;
-    transform: rotate(40deg);
-    transition: 0.8s;
-  }
-  .menu .about{
-    font-family: var(--font-en);
-    font-size: 40px;
-    position:absolute;
-    bottom:25vh;
-    left:57%;
-    transform: rotate(50deg);
-    background-color: #F7F6F2;
-    width: 15vw;
-    height: 15vw;
-    line-height: 15vw;
-    text-align: center;
-    border-radius: 50% 50% 0 50%;
-    animation-name: about-moving;
-    animation-duration: 1.5s;
-  }
-  @keyframes about-moving{
-    0%{opcity:1; bottom:60vh; left:100%; transform: rotate(90deg);}
-    50%{bottom:20vh; left:50%}
-    100%{bottom:25vh; left:57%;}
-  }
-  .menu .about:hover{
-    background-color: #e6e6e6;
-    transform: rotate(55deg);
-    transition: 0.8s;
-  }
-  .menu .about p{
-    margin: 0;
-    transform: rotate(-30deg);
-  }
-  .menu .contents{
-    font-family: var(--font-en);
-    font-size: 50px;
-    color:#F7F6F2;
-    display: inline-block;
-  }
-  .menu .res{
-    transform: rotate(15deg) translate(45vw,13vh);
-    animation-name: res-moving;
-    animation-duration: 1.5s;
-  }
-  @keyframes res-moving{
-    0%{transform:translate(45vw,10vh);}
-    50%{transform: translate(45vw,15vh);}
-    100%{transform: translate(45vw,14vh);}
-  }
-  .menu .contents:hover{
-    color: #000;
-    cursor:context-menu;
-  }
-  .menu .action{
-    transform: rotate(-5deg) translate(60%,42vh);
-  }
-  .menu .active{
-    transform: rotate(1deg) translate(10%,47vh);
-  }
-  </style>
 </head>
 
 <body>
@@ -317,15 +45,17 @@
       <img src="./assets/images/sejin.png" alt="sejinbronzevill">
       <p class="number">[01]</p>
       <p class="name">SEJIN BRONZE VILL</p>
-      <p class="project">앱 디자인 프로젝트</p>
+      <p class="project">디자인 팀 프로젝트</p>
     </a>
     </div>
+    <a href="./projects-adererror.html">
     <div class="wheel-wrapper first">
-      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
+      <img src="./assets/images/adererror.png" alt="sejinbronzevill">
       <p class="number">[02]</p>
-      <p class="name">SEJIN BRONZE VILL</p>
-      <p class="project">앱 디자인 프로젝트</p>
+      <p class="name">ADERERROR</p>
+      <p class="project">반응형 팀 프로젝트</p>
     </div>
+    </a>
     <div class="wheel-wrapper">
       <img src="./assets/images/sejin.png" alt="sejinbronzevill">
       <p class="number">[03]</p>
@@ -364,60 +94,12 @@
       </div>
       </nav>
       </header>
-     <a href="#"><div class="skills">Skills</div></a>
-     <a href="#"><div class="projects">Projects</div></a>
-     <a href="#"><div class="about"><p>About</p></div></a>
+     <a href="./skills.html"><div class="skills">Skills</div></a>
+     <a href="./index.html"><div class="projects">Projects</div></a>
+     <a href="./about.html"><div class="about"><p>About</p></div></a>
      <p class="res contents">Responsible</p>
      <p class="action contents">Actionable</p>
      <p class="active contents">Active</p>
   </section>
-  <script>
-gsap.registerPlugin(ScrollTrigger, Flip);
-var baseTl = gsap.timeline({ paused: true });
-let wheel = document.querySelector(".wheel"),
-	images = gsap.utils.toArray(".wheel-wrapper"),
-	cards = gsap.utils.toArray(".wheel-wrapper"),
-	currentCard; // keep track of last clicked card so we can put it back
-
-function setup() {
-	let radius = wheel.offsetWidth / 2,
-		center = radius,
-		slice = 360 / images.length,
-		DEG2RAD = Math.PI / 180;
-	gsap.set(images, {
-		x: i => center + radius * Math.sin(i * slice * DEG2RAD),
-		y: i => center - radius * Math.cos(i * slice * DEG2RAD),
-		rotation: i => i * slice,
-		xPercent: -50,
-		yPercent: -50
-	});
-}
-
-setup();
-
-window.addEventListener("resize", setup);
-
-gsap.to(wheel, {
-	rotation: -360,
-	ease: "none",
-	duration: images.length,
-	scrollTrigger: {
-		start: 0,
-		end: "max",
-		scrub: 5,
-	}
-});
-$('.menu-wrapper').on('click', (e) => {
-  $('.transit').toggleClass('toggle-btn');
-  $('.menu').toggleClass('toggle-menu');
-
-  $('.global-menu li').each( (index, li) => {
-    $(li).on('click', () => {
-      $('.menu-wrapper').removeClass('toggle-btn')
-      $('.menu').removeClass('toggle-menu');
-    })
-  })
-});
-  </script>
 </body>
 </html>

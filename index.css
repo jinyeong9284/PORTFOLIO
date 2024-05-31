@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+::-webkit-scrollbar {
+  width: 0px; /* 스크롤 바의 너비 */
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 600vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/**** container ****/
+.container {
+  height: 50vh;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+.container .wheel {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600vw;
+  height: 600vw;
+  max-width: 2000px;
+  max-height: 2000px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .wheel .wheel-wrapper {
+  position: absolute;
+  padding-top: 120px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+.container .wheel .wheel-wrapper img {
+  width: 100%;
+  position: absolute;
+  will-change: transform;
+}
+.container .wheel .wheel-wrapper img:hover {
+  transition: 1.5s;
+  border-radius: 500px 500px 0 500px;
+}
+.container .wheel .wheel-wrapper .number {
+  margin-top: 70vh;
+  text-align: center;
+  font-family: var(--font-en);
+  color: #ff3d00;
+  font-size: 14px;
+  line-height: 2;
+}
+.container .wheel .wheel-wrapper .name {
+  text-align: center;
+  font-weight: 700;
+  font-family: var(--font-en);
+  color: #000;
+  margin: 0;
+}
+.container .wheel .wheel-wrapper .project {
+  text-align: center;
+  font-family: var(--font-ko);
+  color: #000;
+  margin: 0;
+}

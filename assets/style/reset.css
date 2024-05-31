@@ -1,0 +1,301 @@
+/* 함수선언 */
+
+:root {
+  --font-ko: "pretendard", -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto,
+    "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-en: "Karla", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Apple SD Gothic Neo", Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f6f2;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+/**** header ****/
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+header .logo {
+  margin: 0;
+  padding: 0;
+}
+header .logo a {
+  font-family: var(--font-en);
+  text-decoration: none;
+  color: #000;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 28px;
+  position: absolute;
+  top: 38px;
+  left: 90px;
+}
+header .text {
+  text-align: center;
+  font-family: var(--font-ko);
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header span {
+  display: block;
+}
+header .menu-wrapper {
+  display: flex;
+}
+header .menu-wrapper p {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 28px;
+  margin: 0;
+}
+header .menu-wrapper {
+  position: absolute;
+  top: 38px;
+  right: 90px;
+  font-family: var(--font-en);
+  cursor: pointer;
+}
+header .menu-wrapper .button span {
+  display: block;
+  width: 32px;
+  background-color: #000;
+  margin-top: 8px;
+  margin-left: 25px;
+  transition: 0.5s;
+}
+header .menu-wrapper .button .bar1 {
+  height: 5px;
+}
+header .menu-wrapper .button .bar2 {
+  height: 2px;
+  margin-top: 8px;
+}
+header .menu-wrapper .button.toggle-btn .bar1 {
+  transform: translateY(8px) rotate(45deg);
+  height: 2px;
+}
+header .menu-wrapper .button.toggle-btn .bar2 {
+  transform: translateY(5px) rotate(-45deg);
+  margin-top: 0;
+}
+
+/**** menu *****/
+.menu {
+  background-color: #99a795;
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+.menu.toggle-menu {
+  display: block;
+}
+.menu .skills {
+  font-family: var(--font-en);
+  font-size: 40px;
+  position: absolute;
+  transform: rotate(-50deg);
+  background-color: #f7f6f2;
+  width: 15vw;
+  height: 15vw;
+  line-height: 15vw;
+  text-align: center;
+  bottom: 19vh;
+  left: 23%;
+  border-radius: 50% 50% 0 50%;
+  animation-name: skill-moving;
+  animation-duration: 1s;
+}
+@keyframes skill-moving {
+  0% {
+    bottom: 0;
+    left: 0;
+  }
+  50% {
+    bottom: 14vh;
+    left: 25%;
+  }
+  100% {
+    bottom: 19vh;
+    left: 23%;
+  }
+}
+.menu .skills:hover {
+  background-color: #000;
+  color: #f7f6f2;
+  transform: rotate(-45deg);
+  transition: 0.8s;
+}
+.menu .projects {
+  font-family: var(--font-en);
+  font-size: 40px;
+  position: absolute;
+  bottom: 15vh;
+  left: 40%;
+  transform: rotate(45deg);
+  width: 15vw;
+  height: 15vw;
+  line-height: 15vw;
+  text-align: center;
+  background-color: #f7f6f2;
+  clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+  animation-name: projects-moving;
+  animation-duration: 2s;
+}
+@keyframes projects-moving {
+  0% {
+    bottom: 80vh;
+    left: 40%;
+    transform: rotate(0deg);
+  }
+  30% {
+    bottom: 10vh;
+    left: 40%;
+  }
+  100% {
+    bottom: 15vh;
+    left: 40%;
+  }
+}
+.menu .projects:hover {
+  background-color: #e17a58;
+  color: #f7f6f2;
+  transform: rotate(40deg);
+  transition: 0.8s;
+}
+.menu .about {
+  font-family: var(--font-en);
+  font-size: 40px;
+  position: absolute;
+  bottom: 25vh;
+  left: 57%;
+  transform: rotate(50deg);
+  background-color: #f7f6f2;
+  width: 15vw;
+  height: 15vw;
+  line-height: 15vw;
+  text-align: center;
+  border-radius: 50% 50% 0 50%;
+  animation-name: about-moving;
+  animation-duration: 2s;
+}
+@keyframes about-moving {
+  0% {
+    opcity: 1;
+    bottom: 60vh;
+    left: 100%;
+    transform: rotate(90deg);
+  }
+  50% {
+    bottom: 20vh;
+    left: 50%;
+  }
+  100% {
+    bottom: 25vh;
+    left: 57%;
+  }
+}
+.menu .about:hover {
+  background-color: #d3d3d3;
+  transform: rotate(55deg);
+  transition: 0.8s;
+}
+.menu .about p {
+  margin: 0;
+  transform: rotate(-30deg);
+}
+.menu .contents {
+  font-family: var(--font-en);
+  font-size: 50px;
+  color: #f7f6f2;
+  display: inline-block;
+}
+.menu .res {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: rotate(15deg);
+  animation-name: res-moving;
+  animation-duration: 1.5s;
+}
+@keyframes res-moving {
+  0% {
+    top: 0;
+    left: 45%;
+  }
+  50% {
+    top: 50%;
+    left: 45%;
+  }
+  100% {
+    top: 40%;
+    left: 45%;
+  }
+}
+.menu .contents:hover {
+  color: #000;
+  cursor: context-menu;
+}
+.menu .action {
+  position: absolute;
+  top: 45%;
+  left: 33%;
+  transform: rotate(-5deg);
+  animation-name: action-moving;
+  animation-duration: 2.5s;
+}
+@keyframes action-moving {
+  0% {
+    top: 0;
+    left: 0%;
+  }
+  50% {
+    top: 50%;
+    left: 33%;
+  }
+  100% {
+    top: 45%;
+    left: 33%;
+  }
+}
+.menu .active {
+  position: absolute;
+  top: 50%;
+  left: 36%;
+  transform: rotate(1deg);
+  animation-name: active-moving;
+  animation-duration: 1.5s;
+}
+@keyframes active-moving {
+  0% {
+    top: 0;
+    left: 20%;
+  }
+  50% {
+    top: 100%;
+    left: 36%;
+  }
+  100% {
+    top: 50%;
+    left: 36%;
+  }
+}

@@ -1,0 +1,36 @@
+@charset "utf-8";
+.about-wrapper {
+  background-color: #363e3a;
+  width: 1600px;
+  height: 700px;
+  border-radius: 50px;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  z-index: -99;
+  color: #f7f6f2;
+}
+.about-wrapper .container {
+  padding: 100px;
+}
+.about-wrapper .container h2 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-en);
+  font-size: 42px;
+}
+.about-wrapper .container p {
+  font-size: 20px;
+  margin-top: 80px;
+  line-height: 2;
+  font-weight: 500;
+  font-family: var(--font-ko);
+}
+.about-wrapper .container p span {
+  display: block;
+}
+.about-wrapper .container .email {
+  text-decoration: underline;
+  margin-top: 120px;
+}
