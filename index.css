@@ -71,3 +71,12 @@ body {
   color: #000;
   margin: 0;
 }
+
+@media screen and (max-width:1490px){
+  .container .wheel .wheel-wrapper {
+    max-width: 450px;
+  }
+  .container .wheel .wheel-wrapper .number {
+    margin-top: 65vh;
+  }
+}

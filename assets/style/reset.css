@@ -299,3 +299,71 @@ header .menu-wrapper .button.toggle-btn .bar2 {
     left: 36%;
   }
 }
+@media screen and (max-width:1490px){
+  .menu .res {
+    position: absolute;
+    top: 34%;
+    left: 45%;
+    transform: rotate(15deg);
+    animation-name: res-moving;
+    animation-duration: 1.5s;
+  }
+  @keyframes res-moving {
+    0% {
+      top: 0;
+      left: 45%;
+    }
+    50% {
+      top: 50%;
+      left: 45%;
+    }
+    100% {
+      top: 34%;
+      left: 45%;
+    }
+  }
+  .menu .action {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: rotate(-5deg);
+    animation-name: action-moving;
+    animation-duration: 2.5s;
+  }
+  @keyframes action-moving {
+    0% {
+      top: 0;
+      left: 0%;
+    }
+    50% {
+      top: 55%;
+      left: 30%;
+    }
+    100% {
+      top: 40%;
+      left: 30%;
+    }
+  }
+  .menu .active {
+    position: absolute;
+    top: 47%;
+    left: 35%;
+    transform: rotate(1deg);
+    animation-name: active-moving;
+    animation-duration: 1.5s;
+  }
+  @keyframes active-moving {
+    0% {
+      top: 0;
+      left: 20%;
+    }
+    50% {
+      top: 100%;
+      left: 35%;
+    }
+    100% {
+      top: 47%;
+      left: 35%;
+    }
+  }
+}

@@ -10,7 +10,7 @@ section {
   display: flex;
 }
 section .tech {
-  padding-left: 10vw;
+  padding-left: 7vw;
 }
 section .tech .text-en {
   font-family: var(--font-en);
@@ -66,5 +66,26 @@ ol li {
   line-height: 1.5;
 }
 li {
-  width: 630px;
+  width: 85%;
+}
+@media screen and (max-width:1490px){
+  section .tech {
+    width: 30vw;
+  }
+  section .tech .text {
+    font-size: 30px;
+    padding-top: 100px;
+  }
+  section .tech a {
+    margin-top: 280px;
+    font-size: 16px;
+  }
+  ul {
+    margin-top: 100px;
+    margin-left: 17vw;
+  }
+  section .tech span {
+    font-size: 16px;
+    padding-right: 36px;
+  }
 }
