@@ -45,13 +45,14 @@ body {
   width: 100%;
   position: absolute;
   will-change: transform;
+  transition: 2s;
 }
 .container .wheel .wheel-wrapper img:hover {
   transition: 1.5s;
   border-radius: 500px 500px 0 500px;
 }
 .container .wheel .wheel-wrapper .number {
-  margin-top: 70vh;
+  margin-top: 65vh;
   text-align: center;
   font-family: var(--font-en);
   color: #ff3d00;
@@ -72,7 +73,7 @@ body {
   margin: 0;
 }
 
-@media screen and (max-width:1490px){
+@media screen and (max-width: 1490px) {
   .container .wheel .wheel-wrapper {
     max-width: 450px;
   }

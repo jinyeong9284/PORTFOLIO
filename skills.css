@@ -27,6 +27,10 @@ section .tech a {
   display: block;
   font-size: 20px;
   margin-top: 430px;
+  text-decoration: underline;
+}
+section .tech a:hover {
+  color: #ff3d00;
 }
 section .tech span {
   text-align: right;
@@ -35,6 +39,7 @@ section .tech img {
   position: relative;
   top: 10px;
   z-index: -99;
+  width: 38px;
 }
 ol {
   list-style: none;
@@ -68,7 +73,7 @@ ol li {
 li {
   width: 85%;
 }
-@media screen and (max-width:1490px){
+@media screen and (max-width: 1490px) {
   section .tech {
     width: 30vw;
   }

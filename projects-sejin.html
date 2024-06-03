@@ -7,101 +7,34 @@
       name="viewport"
       content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
     />
+
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/flower.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/flower.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/flower.png"
+    />
+
     <!-- fonts -->
     <link rel="stylesheet" href="./assets/style/Karla.css" />
     <link rel="stylesheet" href="./assets/style/pretendard.css" />
 
     <!-- style -->
-    <link defer rel="stylesheet" href="./assets/style/reset.css" />
-    <style>
-      .video-container{
-        position: relative;
-        margin-top: 180px;
-        margin-left: 7%;
-        width:680px;
-        height: 490px;
-        border-radius: 35px;
-        overflow: hidden;
-        background-color: #000;
-      }
-      .video-container iframe{
-        position: absolute;
-        width: 100%;
-        height: 490px;
-        object-position: center;
-      }
-      h2,
-      h3 {
-        margin: 0;
-        padding: 0;
-      }
-      section {
-        display: flex;
-      }
-      .contents-fix {
-        position: fixed;
-        right: 10%;
-        top:27%;
-      }
-      .contents-fix h2 {
-        font-size: 35px;
-        font-family: var(--font-en);
-        font-weight: 800;
-      }
-      .contents-fix h3 {
-        font-size: 30px;
-        font-family: var(--font-ko);
-        font-weight: 700;
-      }
-      .contents-fix p:first-of-type {
-        padding-top: 30px;
-        font-family: var(--font-ko);
-        font-size: 16px;
-        line-height: 1.5;
-      }
-      .contents-fix p {
-        padding-top: 15px;
-      }
-      .contents-fix .project-value {
-        display: flex;
-        padding-bottom: 15px;
-      }
-      .contents-fix .project-value .team {
-        margin-left: 30px;
-        font-family: var(--font-ko);
-      }
-      .contents-fix .project-value .font-strong {
-        font-weight: 700;
-        font-family: var(--font-en);
-        font-size: 16px;
-      }
-      .contents-fix .project-value .font-strong p:nth-of-type(2) {
-        font-family: var(--font-ko);
-      }
-      .contents-fix .button {
-        display: block;
-        border: 1px solid #ff3d00;
-        border-radius: 50px;
-        width: 480px;
-        height: 50px;
-        margin-top: 15px;
-        padding: 0;
-        text-align: center;
-        font-size: 15px;
-        color: #ff3d00;
-        font-weight: 600;
-        font-family: var(--font-ko);
-      }
-      .contents-fix .button p{
-        padding: 0;
-        margin: 0;
-        line-height: 50px;
-      }
-      .contents-fix .button:hover{
-        color:#f7f6f2;
-        background-color: #ff3d00;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <link rel="stylesheet" href="./projects-sejin.css" />
+
     <!-- jQuery -->
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/header.js" defer></script>
@@ -154,15 +87,18 @@
 
     <!-- projects adererror -->
     <section>
-        <div class="video-container">
-            <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJbubP4mK9b34f66OgITx0d%2FSejin-Bronze-Vill%3Fnode-id%3D1-499%26t%3DHccCs8OOlP21fjtu-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1" allowfullscreen></iframe>
-        </div>
+      <div class="video-container">
+        <iframe
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJbubP4mK9b34f66OgITx0d%2FSejin-Bronze-Vill%3Fnode-id%3D1-499%26t%3DHccCs8OOlP21fjtu-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div class="contents-fix">
         <h2>SEJIN BRONZE VILL</h2>
         <h3>은하수</h3>
         <p>
-            주차장 예약시스템이란 과업이 떨어졌을 때, 팀원이 세진브론즈빌<br> 주차장에 빈자리 
-            확인이 어렵다며 주차 불편을 토로하여 선정하였습니다.
+          주차장 예약시스템이란 과업이 떨어졌을 때, 팀원이 세진브론즈빌<br />
+          주차장에 빈자리 확인이 어렵다며 주차 불편을 토로하여 선정하였습니다.
         </p>
         <div class="project-value">
           <div class="font-strong">
@@ -176,9 +112,14 @@
             <p>“ 당신의 시간을 지켜주는 주차장 앱 “</p>
           </div>
         </div>
-          <a href="./assets/ppt/sejin-ppt.pdf" class="button"><p>프로젝트 프레젠테이션 보러가기</p></a>
-          <a href="https://www.figma.com/design/JbubP4mK9b34f66OgITx0d/Sejin-Bronze-Vill?node-id=0-1&t=gPl8F77RZPl4UOJU-0" class="button"><p>사이트 방문하기</p></a>
-        </div>
+        <a href="./assets/ppt/sejin-ppt.pdf" class="button"
+          ><p>프로젝트 프레젠테이션 보러가기</p></a
+        >
+        <a
+          href="https://www.figma.com/design/JbubP4mK9b34f66OgITx0d/Sejin-Bronze-Vill?node-id=0-1&t=gPl8F77RZPl4UOJU-0"
+          class="button"
+          ><p>사이트 방문하기</p></a
+        >
       </div>
     </section>
   </body>

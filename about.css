@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 .about-wrapper {
   background-color: #363e3a;
   width: 90%;
@@ -34,4 +35,154 @@
   text-decoration: underline;
   margin-top: 90px;
   font-family: var(--font-en);
+}
+.img-event .me {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  width: 350px;
+  animation: me-event 2s linear infinite;
+}
+.img-event .tori1 {
+  width: 100px;
+  position: absolute;
+  top: 75%;
+  left: 65%;
+  transform: rotate(-50deg);
+  animation: tori1-event 5s linear;
+}
+.img-event .tori1:hover {
+  transform: rotate(-3deg);
+  transition: 1.5s;
+}
+.img-event .tori2 {
+  width: 100px;
+  position: absolute;
+  left: 87%;
+  top: 80%;
+  animation: tori2-event 2s linear infinite;
+}
+.img-event .tori3 {
+  width: 100px;
+  position: absolute;
+  left: 60%;
+  top: 80%;
+  transform: rotate(-20deg);
+  animation: tori3-event 5s linear;
+}
+.img-event .tori3:hover {
+  transform: rotate(3deg);
+  transition: 1.5s;
+}
+.img-event .tori4 {
+  width: 80px;
+  position: absolute;
+  top: 75%;
+  left: 83%;
+  animation: tori4-event 2s linear;
+}
+.img-event .tori4:hover {
+  transform: rotate(-15deg);
+  transition: 1s;
+}
+.img-event .flower {
+  width: 80px;
+  position: absolute;
+  top: 53%;
+  left: 76%;
+  animation: flower-event 3s linear infinite;
+}
+.img-event .smell1 {
+  width: 70px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+}
+.img-event .smell2 {
+  width: 90px;
+  position: absolute;
+  top: 45%;
+  left: 85%;
+  transform: rotate(-70deg);
+}
+@keyframes flower-event {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes me-event {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes tori1-event {
+  0% {
+    top: 50%;
+    left: 65%;
+  }
+  50% {
+    top: 80%;
+    left: 65%;
+  }
+  100% {
+    top: 75%;
+    left: 65%;
+  }
+}
+@keyframes tori2-event {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes tori3-event {
+  0% {
+    top: 80%;
+    left: 0%;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: 85%;
+    left: 70%;
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 80%;
+    left: 60%;
+    transform: rotate(360deg);
+  }
+}
+@keyframes tori4-event {
+  0% {
+    top: 75%;
+    left: 0%;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: 75%;
+    left: 90%;
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 75%;
+    left: 83%;
+    transform: rotate(360deg);
+  }
 }

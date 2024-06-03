@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+.video-container {
+  position: relative;
+  margin-top: 180px;
+  margin-left: 7%;
+  width: 45vw;
+  height: 60vh;
+  border-radius: 35px;
+  overflow: hidden;
+  background-color: #000;
+}
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 580px;
+  object-position: center;
+}
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+section {
+  display: flex;
+}
+.contents-fix {
+  position: fixed;
+  left: 58%;
+  top: 27%;
+}
+.contents-fix h2 {
+  font-size: 35px;
+  font-family: var(--font-en);
+  font-weight: 800;
+}
+.contents-fix h3 {
+  font-size: 30px;
+  font-family: var(--font-ko);
+  font-weight: 700;
+}
+.contents-fix p:first-of-type {
+  padding-top: 30px;
+  font-family: var(--font-ko);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.contents-fix p {
+  padding-top: 15px;
+}
+.contents-fix .project-value {
+  display: flex;
+  padding-bottom: 15px;
+}
+.contents-fix .project-value .team {
+  margin-left: 30px;
+  font-family: var(--font-ko);
+}
+.contents-fix .project-value .font-strong {
+  font-weight: 700;
+  font-family: var(--font-en);
+  font-size: 16px;
+}
+.contents-fix .project-value .font-strong p:nth-of-type(2) {
+  font-family: var(--font-ko);
+}
+.contents-fix .button {
+  display: block;
+  border: 1px solid #ff3d00;
+  border-radius: 50px;
+  width: 480px;
+  height: 50px;
+  margin-top: 15px;
+  padding: 0;
+  text-align: center;
+  font-size: 15px;
+  color: #ff3d00;
+  font-weight: 600;
+  font-family: var(--font-ko);
+}
+.contents-fix .button p {
+  padding: 0;
+  margin: 0;
+  line-height: 50px;
+}
+.contents-fix .button:hover {
+  color: #f7f6f2;
+  background-color: #ff3d00;
+}

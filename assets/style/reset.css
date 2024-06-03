@@ -8,7 +8,14 @@
   --font-en: "Karla", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
     "Apple SD Gothic Neo", Arial, sans-serif;
 }
-
+::-moz-selection {
+  background: #ff3d00;
+  color: #fff;
+}
+::selection {
+  background: #ff3d00;
+  color: #fff;
+}
 body {
   background-color: #f7f6f2;
   margin: 0;
@@ -299,7 +306,7 @@ header .menu-wrapper .button.toggle-btn .bar2 {
     left: 36%;
   }
 }
-@media screen and (max-width:1490px){
+@media screen and (max-width: 1490px) {
   .menu .res {
     position: absolute;
     top: 34%;

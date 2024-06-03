@@ -1,105 +1,136 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <title>JY:HOME</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-  <!-- fonts -->
-  <link rel="stylesheet" href="./assets/style/Karla.css">
-  <link rel="stylesheet" href="./assets/style/pretendard.css">
+  <head>
+    <meta charset="utf-8" />
+    <title>JY:HOME</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/flower.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/flower.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/flower.png"
+    />
 
-  <!-- style -->
-  <link defer rel="stylesheet" href="./assets/style/reset.css">
-  <link defer rel="stylesheet" href="./index.css">
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/style/Karla.css" />
+    <link rel="stylesheet" href="./assets/style/pretendard.css" />
 
-  <!-- jQuery -->
-  <script src="./assets/js/jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
-  <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
-  <script defer src="./index.js"></script>
-  <script defer src="./assets/js/header.js"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <link rel="stylesheet" href="./index.css" />
 
-</head>
+    <!-- jQuery -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
+    <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
+    <script defer src="./index.js"></script>
+    <script defer src="./assets/js/header.js"></script>
+  </head>
 
-<body>
-  <!---- header ---->
-  <header>
-  <h1 class="logo"><a href="./index.html">JY:HOME</a></h1>
-  <p class="text">섬유유연제같이 좋은 향기를 좋은 에너지를 나누는<span>직원이 되도록 하겠습니다</span></p>
-  <nav class="menu-wrapper">
-  <p>MENU</p>
-  <div class="button transit">
-    <span class="bar1 transit"></span>
-    <span class="bar2 transit"></span>
-  </div>
-  </nav>
-  </header>
-
-  <!---- container ---->
-  <section class="container">
-    <div class="wheel">
-      <a href="./projects-sejin.html">
-      <div class="wheel-wrapper">
-      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
-      <p class="number">[01]</p>
-      <p class="name">SEJIN BRONZE VILL</p>
-      <p class="project">디자인 팀 프로젝트</p>
-    </a>
-    </div>
-    <a href="./projects-adererror.html">
-    <div class="wheel-wrapper first">
-      <img src="./assets/images/adererror.png" alt="sejinbronzevill">
-      <p class="number">[02]</p>
-      <p class="name">ADERERROR</p>
-      <p class="project">반응형 팀 프로젝트</p>
-    </div>
-    </a>
-    <div class="wheel-wrapper">
-      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
-      <p class="number">[03]</p>
-      <p class="name">SEJIN BRONZE VILL</p>
-      <p class="project">앱 디자인 프로젝트</p>
-    </div>
-    <div class="wheel-wrapper">
-      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
-      <p class="number">[04]</p>
-      <p class="name">SEJIN BRONZE VILL</p>
-      <p class="project">앱 디자인 프로젝트</p>
-    </div>
-    <div class="wheel-wrapper">
-      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
-      <p class="number">[05]</p>
-      <p class="name">SEJIN BRONZE VILL</p>
-      <p class="project">앱 디자인 프로젝트</p>
-    </div>
-    <div class="wheel-wrapper last">
-      <img src="./assets/images/sejin.png" alt="sejinbronzevill">
-      <p class="number">[06]</p>
-      <p class="name">SEJIN BRONZE VILL</p>
-      <p class="project">앱 디자인 프로젝트</p>
-    </div>
-  </div>
-  </section>
-  <section class="menu">
+  <body>
+    <!---- header ---->
     <header>
       <h1 class="logo"><a href="./index.html">JY:HOME</a></h1>
-      <p class="text">섬유유연제같이 좋은 향기를 좋은 에너지를 나누는<span>직원이 되도록 하겠습니다</span></p>
+      <p class="text">
+        섬유유연제같이 좋은 향기를 좋은 에너지를 나누는<span
+          >직원이 되도록 하겠습니다</span
+        >
+      </p>
       <nav class="menu-wrapper">
-      <p>MENU</p>
-      <div class="button transit">
-        <span class="bar1 transit"></span>
-        <span class="bar2 transit"></span>
-      </div>
+        <p>MENU</p>
+        <div class="button transit">
+          <span class="bar1 transit"></span>
+          <span class="bar2 transit"></span>
+        </div>
       </nav>
+    </header>
+
+    <!---- container ---->
+    <section class="container">
+      <div class="wheel">
+        <a href="./projects-sejin.html">
+          <div class="wheel-wrapper">
+            <img src="./assets/images/sejin.png" alt="sejinbronzevill" />
+            <p class="number">[01]</p>
+            <p class="name">SEJIN BRONZE VILL</p>
+            <p class="project">디자인 팀 프로젝트</p>
+          </div>
+        </a>
+        <a href="./projects-adererror.html">
+          <div class="wheel-wrapper first">
+            <img src="./assets/images/adererror.png" alt="sejinbronzevill" />
+            <p class="number">[02]</p>
+            <p class="name">ADERERROR</p>
+            <p class="project">반응형 팀 프로젝트</p>
+          </div>
+        </a>
+        <div class="wheel-wrapper">
+          <img src="./assets/images/sejin.png" alt="sejinbronzevill" />
+          <p class="number">[03]</p>
+          <p class="name">SEJIN BRONZE VILL</p>
+          <p class="project">앱 디자인 프로젝트</p>
+        </div>
+        <div class="wheel-wrapper">
+          <img src="./assets/images/sejin.png" alt="sejinbronzevill" />
+          <p class="number">[04]</p>
+          <p class="name">SEJIN BRONZE VILL</p>
+          <p class="project">앱 디자인 프로젝트</p>
+        </div>
+        <div class="wheel-wrapper">
+          <img src="./assets/images/sejin.png" alt="sejinbronzevill" />
+          <p class="number">[05]</p>
+          <p class="name">SEJIN BRONZE VILL</p>
+          <p class="project">앱 디자인 프로젝트</p>
+        </div>
+        <div class="wheel-wrapper last">
+          <img src="./assets/images/sejin.png" alt="sejinbronzevill" />
+          <p class="number">[06]</p>
+          <p class="name">SEJIN BRONZE VILL</p>
+          <p class="project">앱 디자인 프로젝트</p>
+        </div>
+      </div>
+    </section>
+    <section class="menu">
+      <header>
+        <h1 class="logo"><a href="./index.html">JY:HOME</a></h1>
+        <p class="text">
+          섬유유연제같이 좋은 향기를 좋은 에너지를 나누는<span
+            >직원이 되도록 하겠습니다</span
+          >
+        </p>
+        <nav class="menu-wrapper">
+          <p>MENU</p>
+          <div class="button transit">
+            <span class="bar1 transit"></span>
+            <span class="bar2 transit"></span>
+          </div>
+        </nav>
       </header>
-     <a href="./skills.html"><div class="skills">Skills</div></a>
-     <a href="./index.html"><div class="projects">Projects</div></a>
-     <a href="./about.html"><div class="about"><p>About</p></div></a>
-     <p class="res contents">Responsible</p>
-     <p class="action contents">Actionable</p>
-     <p class="active contents">Active</p>
-  </section>
-</body>
+      <a href="./skills.html"><div class="skills">Skills</div></a>
+      <a href="./index.html"><div class="projects">Projects</div></a>
+      <a href="./about.html"
+        ><div class="about"><p>About</p></div></a
+      >
+      <p class="res contents">Responsible</p>
+      <p class="action contents">Actionable</p>
+      <p class="active contents">Active</p>
+    </section>
+  </body>
 </html>

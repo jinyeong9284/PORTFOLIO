@@ -7,16 +7,38 @@
       name="viewport"
       content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
     />
+
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/flower.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/flower.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/flower.png"
+    />
+
     <!-- fonts -->
     <link rel="stylesheet" href="./assets/style/Karla.css" />
     <link rel="stylesheet" href="./assets/style/pretendard.css" />
 
     <!-- style -->
-    <link defer rel="stylesheet" href="./assets/style/reset.css" />
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./skills.css" defer />
 
     <!-- jQuery -->
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="./assets/js/header.js"></script>
   </head>
 
@@ -67,25 +89,37 @@
 
     <!-- skills -->
     <div class="line"></div>
-    <section>
+    <section
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="500"
+    >
       <div class="tech">
         <p class="text-en text">TECHNOLOGY STACK</p>
         <p>
           <a class="text-en" href="https://github.com/jinyeong9284/STUDY_JY"
-            ><img src="./assets/images/github_icon.png" alt="icon" />
+            ><img src="./assets/images/github.png" alt="icon" />
             https://github.com/jinyeong9284/STUDY_JY</a
           >
           <span class="text-ko">성실함을 확인해주세요!</span>
         </p>
       </div>
       <ul>
-        <li>
+        <li
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="505"
+        >
           Design
           <ol>
             <li>Photoshop, Illustrator, Figma</li>
           </ol>
         </li>
-        <li>
+        <li
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="505"
+        >
           HTML5, CSS3
           <ol>
             <li>
@@ -94,7 +128,11 @@
             </li>
           </ol>
         </li>
-        <li>
+        <li
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="510"
+        >
           JavaScript & jQuery
           <ol>
             <li>
@@ -103,7 +141,11 @@
             </li>
           </ol>
         </li>
-        <li>
+        <li
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="515"
+        >
           JSON & Ajax
           <ol>
             <li>
@@ -112,13 +154,21 @@
             </li>
           </ol>
         </li>
-        <li>
+        <li
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="520"
+        >
           React
           <ol>
             <li>현대적이고 사용자 중심의 웹 애플리케이션을 개발할 수 있음</li>
           </ol>
         </li>
-        <li>
+        <li
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="525"
+        >
           Git & Git Hub
           <ol>
             <li>
@@ -129,5 +179,8 @@
         </li>
       </ul>
     </section>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

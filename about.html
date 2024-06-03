@@ -7,16 +7,37 @@
       name="viewport"
       content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
     />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/flower.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/flower.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/flower.png"
+    />
+
     <!-- fonts -->
     <link rel="stylesheet" href="./assets/style/Karla.css" />
     <link rel="stylesheet" href="./assets/style/pretendard.css" />
 
     <!-- style -->
-    <link defer rel="stylesheet" href="./assets/style/reset.css" />
-    <link rel="stylesheet" href="./about.css" defer />
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./about.css" />
 
     <!-- jQuery -->
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="./assets/js/header.js"></script>
   </head>
 
@@ -68,8 +89,18 @@
     <!-- about -->
     <section class="about-wrapper">
       <div class="container">
-        <h2>Contact Me!</h2>
-        <p>
+        <h2
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
+          Contact Me!
+        </h2>
+        <p
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="510"
+        >
           더 단단해질 수 있는 코팅막같은 직원이 되도록 노력하겠습니다!
           <span
             >쇼핑몰에서 일을 한 경험으로 디자인 실력이 향상 되었으며 학교에서
@@ -87,5 +118,18 @@
         <p class="email">jjy062512@naver.com</p>
       </div>
     </section>
+    <div class="img-event">
+      <img src="./assets/images/me.png" alt="me" class="me" />
+      <img src="./assets/images/tori1.png" alt="tori1" class="tori1" />
+      <img src="./assets/images/tori2.png" alt="tori2" class="tori2" />
+      <img src="./assets/images/tori3.png" alt="tori3" class="tori3" />
+      <img src="./assets/images/tori4.png" alt="tori4" class="tori4" />
+      <img src="./assets/images/flower.png" alt="flower" class="flower" />
+      <img src="./assets/images/smell.png" alt="smell" class="smell1" />
+      <img src="./assets/images/smell.png" alt="smell" class="smell2" />
+    </div>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
