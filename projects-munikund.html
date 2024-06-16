@@ -164,28 +164,28 @@
               <div class="publishing-sytle">
                 <div class="style-point-list mac">
                   <img src="./assets/images/icon.png" alt="icon" />
-                  <p>
+                  <p class="publishing1">
                     GSAP <strong>ScrollTrigger</strong>를 활용한 스크롤시 글자
                     이벤트 구현
                   </p>
                 </div>
                 <div class="style-point-list map">
                   <img src="./assets/images/icon.png" alt="icon" />
-                  <p>Sticky를 활용한 <strong>모바일 화면 변화</strong></p>
+                  <p class="publishing2">Sticky를 활용한 <strong>모바일 화면 변화</strong></p>
                 </div>
                 <div class="style-point-list map">
                   <img src="./assets/images/icon.png" alt="icon" />
-                  <p>GSAP <strong>Timeline</strong>을 활용한 글자 이벤트</p>
+                  <p class="publishing3">GSAP <strong>Timeline</strong>을 활용한 글자 이벤트</p>
                 </div>
                 <div class="style-point-list map">
                   <img src="./assets/images/icon.png" alt="icon" />
-                  <p>
+                  <p class="publishing4">
                     <strong>SVG</strong>를 활용한 그리는 듯한 장식 요소 이벤트
                   </p>
                 </div>
                 <div class="style-point-list map">
                   <img src="./assets/images/icon.png" alt="icon" />
-                  <p>
+                  <p class="publishing5">
                     <strong>스크롤시 가로로 </strong>넘어가는 페이지가 보이는
                     효과 구현
                   </p>
@@ -378,5 +378,77 @@
         >
       </div>
     </section>
+    <script>
+       $(document).ready(function(){
+            $(".publishing1").hover(
+                function(){ //mouseover시에
+                    $(".publishing .publishing-wrapper .publishing-hover").css("background","url(./assets/images/publishing1.png) 50% / cover"),
+                    $(".publishing .publishing-wrapper .publishing-hover p").css("display","none"),
+                    $(".publishing .publishing-wrapper .publishing-hover").css("transition","2s")
+                },
+                function(){ //mouseout시에 
+                    $(".publishing .publishing-wrapper .publishing-hover").css("background","black"),
+                    $(".publishing .publishing-wrapper .publishing-hover p").css("display","block"),
+                    $(".publishing .publishing-wrapper .publishing-hover").css("transition","2s")
+                }
+            )
+        })
+        $(document).ready(function(){
+            $(".publishing2").hover(
+                function(){ //mouseover시에
+                    $(".publishing .publishing-wrapper .publishing-hover").css("background","url(./assets/images/publishing2.png) 50% / cover"),
+                    $(".publishing .publishing-wrapper .publishing-hover p").css("display","none"),
+                    $(".publishing .publishing-wrapper .publishing-hover").css("transition","2s")
+                },
+                function(){ //mouseout시에 
+                    $(".publishing .publishing-wrapper .publishing-hover").css("background","black"),
+                    $(".publishing .publishing-wrapper .publishing-hover p").css("display","block"),
+                    $(".publishing .publishing-wrapper .publishing-hover").css("transition","2s")
+                }
+            )
+        })
+        $(document).ready(function(){
+            $(".publishing3").hover(
+                function(){ //mouseover시에
+                    $(".publishing .publishing-wrapper .publishing-hover").css("background","url(./assets/images/publishing3.png) 50% / cover"),
+                    $(".publishing .publishing-wrapper .publishing-hover p").css("display","none"),
+                    $(".publishing .publishing-wrapper .publishing-hover").css("transition","2s")
+                },
+                function(){ //mouseout시에 
+                    $(".publishing .publishing-wrapper .publishing-hover").css("background","black"),
+                    $(".publishing .publishing-wrapper .publishing-hover p").css("display","block"),
+                    $(".publishing .publishing-wrapper .publishing-hover").css("transition","2s")
+                }
+            )
+        })
+        $(document).ready(function(){
+            $(".publishing4").hover(
+                function(){ //mouseover시에
+                    $(".publishing .publishing-wrapper .publishing-hover").css("background","url(./assets/images/publishing4.png) 50% / cover"),
+                    $(".publishing .publishing-wrapper .publishing-hover p").css("display","none"),
+                    $(".publishing .publishing-wrapper .publishing-hover").css("transition","2s")
+                },
+                function(){ //mouseout시에 
+                    $(".publishing .publishing-wrapper .publishing-hover").css("background","black"),
+                    $(".publishing .publishing-wrapper .publishing-hover p").css("display","block"),
+                    $(".publishing .publishing-wrapper .publishing-hover").css("transition","2s")
+                }
+            )
+        })
+        $(document).ready(function(){
+            $(".publishing5").hover(
+                function(){ //mouseover시에
+                    $(".publishing .publishing-wrapper .publishing-hover").css("background","url(./assets/images/publishing5.png) 50% / cover"),
+                    $(".publishing .publishing-wrapper .publishing-hover p").css("display","none"),
+                    $(".publishing .publishing-wrapper .publishing-hover").css("transition","2s")
+                },
+                function(){ //mouseout시에 
+                    $(".publishing .publishing-wrapper .publishing-hover").css("background","black"),
+                    $(".publishing .publishing-wrapper .publishing-hover p").css("display","block"),
+                    $(".publishing .publishing-wrapper .publishing-hover").css("transition","2s")
+                }
+            )
+        })
+    </script>
   </body>
 </html>

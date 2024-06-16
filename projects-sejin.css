@@ -4,8 +4,8 @@
   position: relative;
   margin-top: 180px;
   margin-left: 7%;
-  width: 45vw;
-  height: 60vh;
+  width: 52vw;
+  height: 70vh;
   border-radius: 35px;
   overflow: hidden;
   background-color: #000;
@@ -26,7 +26,7 @@ section {
 }
 .contents-fix {
   position: fixed;
-  left: 58%;
+  left: 68%;
   top: 27%;
 }
 .contents-fix h2 {

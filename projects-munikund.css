@@ -184,13 +184,14 @@ h3 {
 }
 .publishing .publishing-wrapper {
   display: flex;
+  cursor: pointer;
 }
 .publishing .publishing-wrapper .publishing-hover {
   margin-left: 7vw;
   margin-top: 2vw;
   width: 20vw;
   height: 12vw;
-  background-color: #000;
+  background:#000;
   border-radius: 2vw;
 }
 .publishing .publishing-wrapper .publishing-hover p {
