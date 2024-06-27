@@ -1,0 +1,129 @@
+@charset "utf-8";
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay Thin"),
+    url(../fonts/NeueHaasDisplayXXThin.ttf) format("ttf");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay Thin Italic"),
+    url(../fonts/NeueHaasDisplayXXThinItalic.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay ExtraLight"),
+    url(../fonts/NeueHaasDisplayXThin.ttf) format("ttf");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay ExtraLightItalic"),
+    url(../fonts/NeueHaasDisplayXThinItalic.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay Light"),
+    url(../fonts/NeueHaasDisplayThin.ttf) format("ttf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay LightItalic"),
+    url(../fonts/NeueHaasDisplayThinItalic.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay Regular"),
+    url(../fonts/NeueHaasDisplayLight.ttf) format("ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay RegularItalic"),
+    url(../fonts/NeueHaasDisplayLightItalic.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay Medium"),
+    url(../fonts/NeueHaasDisplayRoman.ttf) format("ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay MediumItalic"),
+    url(../fonts/NeueHaasDisplayRomanItalic.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay SemiBold"),
+    url(../fonts/NeueHaasDisplayMediu.ttf) format("ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Karla";
+  src: local("Karla SemiBoldItalic"),
+    url(../fonts/NeueHaasDisplayMediumItalic.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay Bold"),
+    url(../fonts/NeueHaasDisplayBold.ttf) format("ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay BoldItalic"),
+    url(../fonts/NeueHaasDisplayBoldItalic.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay ExtraBold"),
+    url(../fonts/NeueHaasDisplayBlack.ttf) format("ttf");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: local("NeueHaasDisplay ExtraBoldItalic"),
+    url(../fonts/NeueHaasDisplayBlackItalic.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+}
