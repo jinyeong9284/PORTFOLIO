@@ -87,3 +87,8 @@ section {
   color: #f7f6f2;
   background-color: #ff3d00;
 }
+@media screen and (max-width: 1490px) {
+  .contents-fix {
+    left: 64%;
+  }
+}
